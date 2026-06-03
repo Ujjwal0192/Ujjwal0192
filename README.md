@@ -54,7 +54,7 @@ const ujjwal = {
 };
 ```
 
-- 🔭 Currently building **NexTask** — a full-stack task management platform
+- 🔭 Currently building **ShopNow** & **CollabSpace** — production MERN apps deployed on Render
 - 🌱 Sharpening **DSA** skills daily on LeetCode
 - 💡 Passionate about **RESTful APIs**, **JWT Auth** & **MVC Architecture**
 - 🎯 Goal: Ship production-ready, secure & scalable software systems
@@ -95,10 +95,11 @@ const ujjwal = {
   <img src="https://img.shields.io/badge/MVC-Architecture-00D9FF?style=for-the-badge&logo=abstract&logoColor=white" alt="MVC"/>
 </p>
 
-### 🗄️ Databases
+### 🗄️ Databases & Cache
 <p>
   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
   <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
 </p>
 
 ### 🔧 Tools & Platforms
@@ -129,19 +130,19 @@ const ujjwal = {
 
 <div align="center">
 
-### 🗂️ NexTask — Full Stack Task Management Platform
+### 🛒 ShopNow — Full Stack E-Commerce Platform
 
 </div>
 
-> **A powerful MERN-based task management system built for teams and individuals**
+> **Production-grade MERN e-commerce app with atomic inventory management and admin analytics**
 
 | Feature | Details |
 |---|---|
-| 🔐 **Auth** | JWT Authentication + Role-Based Access Control |
-| 📋 **Tasks** | Create, assign, track with due dates & progress |
-| ✅ **Checklists** | Sub-tasks, attachments & user assignments |
-| 📡 **APIs** | RESTful APIs following MVC Architecture |
-| 📱 **UI** | Fully responsive with Tailwind CSS |
+| 🔐 **Auth** | JWT Authentication + Role-Based Access Control (Admin / Customer) |
+| 🛡️ **Inventory** | Atomic `findOneAndUpdate` with `$gte: 0` — race-condition-safe stock deduction |
+| 🛍️ **Cart & Orders** | Full cart flow, Buy Now, order placement & history with status tracking |
+| ⚡ **Rate Limiting** | Redis-backed per-route limiting with memory-store fallback — never crashes on missing Redis |
+| 📊 **Admin** | Dashboard with revenue stats, CSV export for orders & customers via Node.js streams |
 
 **Tech Stack:**
 <p>
@@ -149,6 +150,44 @@ const ujjwal = {
   <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white"/>
   <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white"/>
   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=JSON%20web%20tokens&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
+</p>
+
+<a href="https://github.com/ujjwal0192/ShopNow">
+  <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+&nbsp;
+<a href="https://shoppnow.onrender.com/">
+  <img src="https://img.shields.io/badge/Live_Demo-46E3B7?style=for-the-badge&logo=render&logoColor=white"/>
+</a>
+
+---
+
+<div align="center">
+
+### 🗂️ CollabSpace — Full Stack Task Management Platform
+
+</div>
+
+> **Production-grade MERN task manager with RBAC, Cloudinary uploads, Excel exports & Recharts dashboard**
+
+| Feature | Details |
+|---|---|
+| 🔐 **Auth** | JWT Authentication + Role-Based Access Control (Admin / Member) |
+| 🏢 **RBAC** | Real PrivateRoute — wrong roles redirected to their correct dashboard |
+| 🖼️ **Images** | Cloudinary face-detect crop (`g_face` transform) for profile photos |
+| 📊 **Dashboard** | Recharts Pie + Bar charts with skeleton loading on all data-heavy pages |
+| 📁 **Reports** | Excel export for tasks & users via ExcelJS — no third-party service |
+
+**Tech Stack:**
+<p>
+  <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Cloudinary-3448C5?style=flat-square&logo=cloudinary&logoColor=white"/>
   <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=JSON%20web%20tokens&logoColor=white"/>
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
 </p>
@@ -157,73 +196,8 @@ const ujjwal = {
   <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 &nbsp;
-<a href="https://nextask-frontend.onrender.com/">
-  <img src="https://img.shields.io/badge/Live_Demo-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"/>
-</a>
-
----
-
-<div align="center">
-
-### 🌤️ SkyCast Pro — Real-Time Weather Application
-
-</div>
-
-> **A sleek, real-time weather app with dynamic DOM updates and live API data**
-
-| Feature | Details |
-|---|---|
-| 🌡️ **Weather Data** | Temperature, humidity, wind speed & conditions |
-| ⚡ **Dynamic UI** | Live DOM updates without page reload |
-| 🌍 **Location** | Search any city worldwide |
-| 📱 **Responsive** | Works seamlessly on all devices |
-
-**Tech Stack:**
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Weather_API-FF6C37?style=flat-square&logo=cloudflareworkers&logoColor=white"/>
-</p>
-
-<a href="https://github.com/ujjwal0192/SkyCastPro">
-  <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-&nbsp;
-<a href="https://skycast-pro.netlify.app/">
-  <img src="https://img.shields.io/badge/Live_Demo-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"/>
-</a>
-
----
-
-<div align="center">
-
-### 🎨 PixelsByUjjwal — Personal Portfolio Website
-
-</div>
-
-> **A modern, performance-optimized portfolio built with React.js and Tailwind CSS**
-
-| Feature | Details |
-|---|---|
-| ✉️ **Contact Form** | Integrated with EmailJS for direct messaging |
-| ⚡ **Performance** | Optimized load times & responsive design |
-| 🎨 **Design** | Clean, modern UI showcasing projects & skills |
-| 📱 **Mobile First** | Pixel-perfect across all screen sizes |
-
-**Tech Stack:**
-<p>
-  <img src="https://img.shields.io/badge/React.js-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white"/>
-  <img src="https://img.shields.io/badge/EmailJS-FF6C37?style=flat-square&logo=minutemailer&logoColor=white"/>
-</p>
-
-<a href="https://github.com/ujjwal0192/PixelsByUjjwal">
-  <img src="https://img.shields.io/badge/View_Repository-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-&nbsp;
-<a href="https://pixelsbyujjwal.netlify.app">
-  <img src="https://img.shields.io/badge/Live_Demo-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"/>
+<a href="https://collabspace-xg87.onrender.com/login">
+  <img src="https://img.shields.io/badge/Live_Demo-46E3B7?style=for-the-badge&logo=render&logoColor=white"/>
 </a>
 
 ---
